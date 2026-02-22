@@ -2,17 +2,25 @@ public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        printLine(" ***** ", " ***** ", " ******", " ******");
-        printLine("*     *", "*     *", "*     *", "*     *");
-        printLine("*     *", "*     *", "*     *", "*      ");
-        printLine("*     *", "*     *", "****** ", " ***** ");
-        printLine("*     *", "*     *", "*      ", "      *");
-        printLine("*     *", "*     *", "*      ", "*     *");
-        printLine(" ***** ", " ***** ", "*      ", " ******");
+        String[] banner = createBanner();
 
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 
-    public static void printLine(String part1, String part2, String part3, String part4) {
-        System.out.println(String.join("   ", part1, part2, part3, part4));
+    public static String[] createBanner() {
+
+        String[] lines = new String[7];
+
+        lines[0] = String.join("   ", " ***** ", " ***** ", " ******", " ******");
+        lines[1] = String.join("   ", "*     *", "*     *", "*     *", "*     *");
+        lines[2] = String.join("   ", "*     *", "*     *", "*     *", "*      ");
+        lines[3] = String.join("   ", "*     *", "*     *", "****** ", " ***** ");
+        lines[4] = String.join("   ", "*     *", "*     *", "*      ", "      *");
+        lines[5] = String.join("   ", "*     *", "*     *", "*      ", "*     *");
+        lines[6] = String.join("   ", " ***** ", " ***** ", "*      ", " ******");
+
+        return lines;
     }
 }
